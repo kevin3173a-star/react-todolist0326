@@ -4,13 +4,14 @@
   width: 500px;
   height: 100vh;
   padding:20px;
+  border-radius: 30px;;
 }
 
 .head h2{font-size: 40px;
 
 }
 .headBtn{display: flex; justify-content: center; gap:20px;
-padding:10px 0;}
+padding:20px 0;}
 .headBtn button{border:none; padding:5px 15px;
 border-radius:10px; background-color: #fff; }
 .headBtn button:hover{background-color: #f0f0f0;
@@ -28,4 +29,5 @@ margin:0 auto;}
 .insertBtn form input{width: 60%; height: 30px;}
 .insertBtn form button{height: 35px; border:none;
 background-color: #003cff; border-radius: 10px; 
-margin-left:50px;color:white; padding:10px 20px;}
+margin-left:50px;color:white; padding:8px 20px;}
+.insertBtn form button:hover{background-color: #0003c4;}
