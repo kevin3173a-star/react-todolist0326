@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+  background: #d6e4ff;
+  width: 500px;
+  height: 100vh;
+  padding:20px;
+}
+
+.head h2{font-size: 40px;
+
+}
+.headBtn{display: flex; justify-content: center; gap:20px;
+padding:10px 0;}
+.headBtn button{border:none; padding:5px 15px;
+border-radius:10px; background-color: #fff; }
+.headBtn button:hover{background-color: #f0f0f0;
+font-weight: 600;}
+ul{display: flex; 
+  flex-direction: column; margin:0;padding:0;
+  
+
+}
+ul li{ list-style-type: none; padding:20px 0; border-bottom:1px black dashed;
+display: flex; width: 80%; justify-content: space-between;
+margin:0 auto;}
+.insertBtn{width: 100%;}
+.insertBtn form{width: 100%; padding-top:50px;}
+.insertBtn form input{width: 60%; height: 30px;}
+.insertBtn form button{height: 35px; border:none;
+background-color: #003cff; border-radius: 10px; 
+margin-left:50px;color:white; padding:10px 20px;}
