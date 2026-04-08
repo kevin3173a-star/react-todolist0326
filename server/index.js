@@ -5,6 +5,7 @@ const cors = require('cors');//cors오류 1
 const bodyParser = require('body-parser')
 
 const todolist = require('./api/todolist.js')//#6. 분리된 js가져와서
+const contact = require('./api/contact.js')//#6. 분리된 js가져와서
 const {connectDB} = require('./db/db_todolist.js')
 const app = express()
 
@@ -15,6 +16,7 @@ app.use(bodyParser.json())
 async function serverStart(){
   await connectDB();//connectDB가 끝나기전까진 밑에 실행x(db활성화된 후에 밑에 실행)
   app.use('/todo',todolist)//#7. 가져온 js 사용방법
+  app.use('/contact',contact)//#7. 가져온 js 사용방법
   // "/todo":요청 url(대분류(프로젝트명)) (~4000/todo)
 
   app.listen(4000, () => {

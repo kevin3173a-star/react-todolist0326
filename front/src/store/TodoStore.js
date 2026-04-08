@@ -43,7 +43,7 @@ const todoStore = create((set) => ({
         await axios.put(`${process.env.REACT_APP_APIURL}/state?id=${id}`,{isdone:true});
         set((item)=>{
             let updateData=item.data.map((obj)=>{
-                if(obj._id==id){
+                if(obj._id===id){
                     obj.isdone=true;
                 }
                 return obj;
