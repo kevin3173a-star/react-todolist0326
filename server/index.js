@@ -8,6 +8,7 @@ const todolist = require('./api/todolist.js')//#6. 분리된 js가져와서
 const contact = require('./api/contact.js')//#6. 분리된 js가져와서
 const {connectDB} = require('./db/db_todolist.js')
 const app = express()
+const news = require('./api/news.js')//뉴스 api 연결 05.14
 
 app.use(cors());//cors오류 2( use: 내가 가진 모듈을 사용)
 app.use(bodyParser.urlencoded())
@@ -18,9 +19,10 @@ async function serverStart(){
   app.use('/todo',todolist)//#7. 가져온 js 사용방법
   app.use('/contact',contact)//#7. 가져온 js 사용방법
   // "/todo":요청 url(대분류(프로젝트명)) (~4000/todo)
+  app.use('/news',news);//뉴스 api 연결 05.14
 
   app.listen(4000, () => {
-    console.log('Server is running on http://localhost:3000')
+    console.log('Server is running on http://localhost:4000')
   })
 }
 serverStart();
